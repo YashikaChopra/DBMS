@@ -22,6 +22,7 @@ from studs.api import ClassList, ParticularLocation
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('studs.urls')),
+    path('',include('authapp.urls')),
     url(r'^api/class_list/$', ClassList.as_view(), name='class_list'),
     url(r'^api/class_list/(?P<class_id>\d+)/$', ParticularLocation.as_view(), name='particular_location'),
     #url(r'^api/class_list/<str:NameOfClass>/$', ParticularLocation.as_view()),

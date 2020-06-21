@@ -32,6 +32,7 @@ ALLOWED_HOSTS = ['127.0.0.1', '.pythonanywhere.com']
 
 INSTALLED_APPS = [
     'studs',
+    'authapp',
     'rest_framework',
     'django.contrib.admin',
     'django.contrib.auth',
