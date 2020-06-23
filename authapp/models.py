@@ -13,7 +13,7 @@ class Attendance(models.Model):
 
 
     def __str__(self):
-        return self.lectureclass
+        return self.lectureclass.NameOfClass
 
 
 class UserProfile(models.Model):

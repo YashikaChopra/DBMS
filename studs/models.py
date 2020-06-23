@@ -5,7 +5,8 @@ from datetime import datetime
         
 class ClassLocation(models.Model):
     NameOfClass = models.CharField(max_length=50,unique=True)
-    location = models.CharField(max_length=200)
+    latitude = models.CharField(max_length=200,default="1N")
+    longitude= models.CharField(max_length=200,default="1N")
     radius = models.FloatField()
     roomno = models.CharField(max_length=50,default="LC1")
     start_time = models.TimeField(default=datetime.now())
