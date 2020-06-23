@@ -7,6 +7,7 @@ class Attendance(models.Model):
     lectureclass=models.ForeignKey(ClassLocation,to_field="NameOfClass",on_delete=models.CASCADE)
     date=models.DateTimeField(default=timezone.now)
     present=models.BooleanField()
+    roomno=models.CharField(max_length=100,default="LC1")
     studentid=models.ForeignKey(User,to_field="username",on_delete=models.CASCADE)
 
 
@@ -21,7 +22,7 @@ class UserProfile(models.Model):
     courseenrolled=models.ManyToManyField(ClassLocation)
 
     def __str__(self):
-        return self.courseenrolled
+        return self.studentid.username
 
 
 

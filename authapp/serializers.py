@@ -6,7 +6,7 @@ from .models import UserProfile
 class AttendanceSerializer(serializers.ModelSerializer):
     class Meta:
         model = Attendance
-        fields = ['lectureclass','date','present','studentid']
+        fields = ['lectureclass','date','present','studentid','roomno']
 
 
 
